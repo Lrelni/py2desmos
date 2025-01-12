@@ -18,6 +18,9 @@ def convert(obj):
             return convert_tuple(obj)
         case 'list':
             return convert_list(obj)
+        case _:
+            error_msg = f"unsupported conversion type: '{type(obj).__name__}'"
+            raise TypeError(error_msg)
 
 def convert_varname(name):
     return f"{name[0]}_{{{name[1:]}}}" if len(name) > 1 else name
