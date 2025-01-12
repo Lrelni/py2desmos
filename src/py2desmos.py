@@ -47,6 +47,9 @@ def brackets(x):
 def braces(x):
     return LBRACE + convert(x) + RBRACE
 
+def group(x):
+    return "{" + convert(x) + "}"
+
 def convert_number(x):
     # i really wish it weren't so annoying to do this
     return format(x, f".{str(0-decimal.Decimal(str(x)).as_tuple().exponent)}f")
