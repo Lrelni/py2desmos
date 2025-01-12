@@ -35,6 +35,18 @@ def convert_iterable(iterable, left, right):
     result = result[:-1] + right
     return result
 
+def fraction(n, d):
+    return f"\\frac{{{convert(n)}}}{{{convert(d)}}}"
+
+def parentheses(x):
+    return LPAREN + convert(x) + RPAREN
+
+def brackets(x):
+    return LBRACK + convert(x) + RBRACK
+
+def braces(x):
+    return LBRACE + convert(x) + RBRACE
+
 def convert_number(x):
     # i really wish it weren't so annoying to do this
     return format(x, f".{str(0-decimal.Decimal(str(x)).as_tuple().exponent)}f")
