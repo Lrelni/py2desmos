@@ -1,2 +1,2 @@
 # py2desmos
-Library for comverting Python objects into Desmos LaTeX syntax
+Library for converting Python objects into Desmos LaTeX syntax
